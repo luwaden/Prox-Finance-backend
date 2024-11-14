@@ -1,0 +1,4 @@
+"email": "ayo@mail",
+      "password": "12345",
+      "userName": "ayo",
+      "phoneNumber": "08012"

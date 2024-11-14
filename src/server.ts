@@ -2,7 +2,7 @@ import app from "./config/app.config";
 import colors from "colors";
 import connectDB from "./config/db.config";
 import v1Router from "./routes/v1/routes.router";
-
+import bodyParser from "body-parser";
 const connect = async (): Promise<void> => {
   //connect database
   await connectDB();
@@ -12,7 +12,8 @@ connect();
 
 const PORT = process.env.PORT || 5000;
 
-app.use("/api", v1Router);
+app.use(bodyParser.json());
+app.use("/api/v1", v1Router);
 
 const server = app.listen(PORT, () => {
   console.log(
