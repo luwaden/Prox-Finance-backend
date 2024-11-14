@@ -1,6 +1,7 @@
 import app from "./config/app.config";
 import colors from "colors";
 import connectDB from "./config/db.config";
+import v1Router from "./routes/v1/routes.router";
 
 const connect = async (): Promise<void> => {
   //connect database
@@ -10,6 +11,8 @@ const connect = async (): Promise<void> => {
 connect();
 
 const PORT = process.env.PORT || 5000;
+
+app.use("/api", v1Router);
 
 const server = app.listen(PORT, () => {
   console.log(

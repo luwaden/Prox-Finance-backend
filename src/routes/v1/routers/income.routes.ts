@@ -1,6 +1,9 @@
 import { Router } from "express";
-import { addIncome, deleteIncome } from "../controllers/income.contrller";
-import { getAllIncome } from "../controllers/income.contrller";
+import {
+  addIncome,
+  deleteIncome,
+  getAllIncome,
+} from "../../../controllers/income.contrller";
 
 const incomeRoute = Router();
 
